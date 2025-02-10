@@ -12,20 +12,11 @@ const resolvers = {
     reviews() {
       return db.reviews;
     },
-    async posts() {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      console.log(response);
-      const data = await response.json();
-      return data;
-    },
-    async post(_, {id}) {
-      const response = await fetch(
-        `https://jsonplaceholder.typicode.com/posts/${id}`
-      );
-      const data = await response.json();
-      return data;
+  },
+
+  User: {
+    reviews(parent) {
+      return db.reviews.filter((review) => review.userid === parent.id);
     },
   },
 };
