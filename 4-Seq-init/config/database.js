@@ -1,10 +1,10 @@
 const { Sequelize } = require('sequelize');
 
-// Option 3: Passing parameters separately (other dialects)
+require("dotenv").config();
 
 const sequelize = new Sequelize(
   process.env.DATABASE,
-  process.env.USERNAME,
+  process.env.DBUSERNAME,
   process.env.PASSWORD,  
 {
   host: 'localhost',
