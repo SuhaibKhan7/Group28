@@ -10,6 +10,8 @@ const User = sequelize.define(
     lastName: {
       type: DataTypes.STRING,
     },
+    
+    
   },
   {
     // Other model options go here
