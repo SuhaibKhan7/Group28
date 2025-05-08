@@ -1,13 +1,18 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDum2Jfcjr91ZpW3N5oiSvVT0RZB9L1_Lw",
-  authDomain: "imagesup-57bcb.firebaseapp.com",
-  projectId: "imagesup-57bcb",
-  storageBucket: "imagesup-57bcb.firebasestorage.app",
-  messagingSenderId: "735117912889",
-  appId: "1:735117912889:web:5fce6ea144e55ce64116e8",
+  apiKey: "AIzaSyBVNBk_YG_O9z0Qz5yamGmWygXpIFn0Uu4",
+  authDomain: "imageuploader-10f7e.firebaseapp.com",
+  databaseURL: "https://imageuploader-10f7e-default-rtdb.firebaseio.com",
+  projectId: "imageuploader-10f7e",
+  storageBucket: "imageuploader-10f7e.firebasestorage.app",
+  messagingSenderId: "1080137793015",
+  appId: "1:1080137793015:web:2bab0891ece0ae3f8582f2",
+  measurementId: "G-CHD67372LQ",
 };
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
